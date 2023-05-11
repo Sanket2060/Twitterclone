@@ -5,15 +5,15 @@ const UserTweet = ({ setShouldRefresh }) => {
     console.log(tweetContent);
     const upload = async () => {
         try {
-            await axios.post("https://react-workshop-todo.fly.dev/posts/all", {
-                authorname: 'Sanchit Poudel',
+            await axios.post("https://react-workshop-todo.fly.dev/posts", {
+                authorname: 'Sanket Karki',
                 content: tweetContent,
-                avatar: "https://sanchitpoudel.com.np/assets/logo.jpeg",
+                avatar: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F3%2F3b%2FSpongeBob_SquarePants_character.svg%2F1200px-SpongeBob_SquarePants_character.svg.png&tbnid=_J43LrmSL0ZcZM&vet=12ahUKEwjqtOXbyeL-AhWByaACHYH_ABMQMygAegUIARDhAQ..i&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpongeBob_SquarePants_(character)&docid=QJghRjEztyfmyM&w=1200&h=1200&q=SpongeBob%20SquarePants%20(character)&ved=2ahUKEwjqtOXbyeL-AhWByaACHYH_ABMQMygAegUIARDhAQ",
                 date: '2023',
-                image: 'https://sanchitpoudel.com.np/assets/logo.jpeg',
+                image: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2F3%2F3b%2FSpongeBob_SquarePants_character.svg%2F1200px-SpongeBob_SquarePants_character.svg.png&tbnid=_J43LrmSL0ZcZM&vet=12ahUKEwjqtOXbyeL-AhWByaACHYH_ABMQMygAegUIARDhAQ..i&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSpongeBob_SquarePants_(character)&docid=QJghRjEztyfmyM&w=1200&h=1200&q=SpongeBob%20SquarePants%20(character)&ved=2ahUKEwjqtOXbyeL-AhWByaACHYH_ABMQMygAegUIARDhAQ',
             }, {
                 headers: {
-                    apikey: '6457383b7213f63d43544ac0'
+                    apikey: '6456780c7213f63d4325ec49'
                 }
             });
             setTweetContent("");
