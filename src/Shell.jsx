@@ -1,14 +1,13 @@
 import Home from "./pages/Home";
-import Navbar from "./Navbar";
 import {BrowserRouter,Route,Routes } from "react-router-dom";
 import Singletweet from "./pages/singletweet";
-
+import Navbar from "./components/Navbar";
 const Shell = () => {
 return (
 
     <>
-      <Navbar/>
-      <BrowserRouter>
+        <Navbar />
+        <BrowserRouter>
         <Routes>
             <Route index element={Home}></Route>
             <Route path="/about" element={<About />}></Route>

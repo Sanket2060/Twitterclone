@@ -1,10 +1,9 @@
 
 import Tweet from '../components/Tweet';
 import axios from 'axios';
-import './App.css'
+import "./src/App.css";
 import { useEffect, useState } from 'react';
 import UserTweet from '../components/UserTweet';
-import Navbar from '../Navbar';
 const Home = () => {
   const [users, setUser] = useState([]);
 
