@@ -1,8 +1,6 @@
-import Header from "./header";
-import TweetBody from "./tweetbody";
-import Footer from "./footer";
-import UserTweet from "./UserTweet";
-
+import Header from "./Header";
+import TweetBody from "./TweetBody";
+import Footer from "./Footer";
 const Tweet = ({ name, username, time, tweet, image, avatar }) => {
     return (<div className="tweet">
         <img
