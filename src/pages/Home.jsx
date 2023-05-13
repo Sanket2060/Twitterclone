@@ -4,6 +4,7 @@ import axios from 'axios';
 import "../../src/App.css";
 import { useEffect, useState } from 'react';
 import UserTweet from '../components/UserTweet';
+import Navbar from '../components/Navbar';
 const Home = () => {
   const [users, setUser] = useState([]);
   const [shouldRefresh, setShouldRefresh] = useState(false);
@@ -22,9 +23,11 @@ const Home = () => {
   return (
     <>
     
-      <UserTweet  setShouldRefresh={setShouldRefresh} />
+      <UserTweet setShouldRefresh={setShouldRefresh} />
       {users.map(({ user, date, content, image, _id }) => {
-        return <Tweet name={user.fullname}  time={date} tweet={content} image={image} avatar={"https://avatars.githubusercontent.com/u/"+user.githubId+"?v=4"} key={user.id} />
+        return <Tweet name={user.fullname} username={'@'+user.name}  time="5hrs" tweet={content} image={image} avatar={"https://avatars.githubusercontent.com/u/"+user.githubId+"?v=4"} key={user._id} />
+        // return <Tweet name={data.user.fullname}  time="5hrs" tweet={data.content} image={data.image} avatar={"https://avatars.githubusercontent.com/u/"+data.user.githubId+"?v=4"} key={data.user._id} />
+ 
       }
       )}
     </>

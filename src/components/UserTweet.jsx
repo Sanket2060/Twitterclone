@@ -6,11 +6,11 @@ const UserTweet = ({ setShouldRefresh }) => {
     const upload = async () => {
         try {
             await axios.post("https://react-workshop-todo.fly.dev/posts", {
-                authorname: 'Sanket Karki',
                 content: tweetContent,
-                avatar: "",
-                date: '2023',
-                image: 'https://static.wikia.nocookie.net/cartoons/images/e/ed/Profile_-_SpongeBob_SquarePants.png/revision/latest?cb=20230305115632',
+                image: 'https://deadline.com/wp-content/uploads/2023/02/nickelodeon.jpg?w=681&h=383&crop=1',
+                username: 'Sanket Karki',
+                fullname:'Sanket Karki'
+                
             }, {
                 headers: {
                     apikey: '6456780c7213f63d4325ec49'
