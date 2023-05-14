@@ -1,8 +1,18 @@
 import Header from "./Header";
 import TweetBody from "./TweetBody";
 import Footer from "./Footer";
-const Tweet = ({ name, username, time, tweet, image, avatar }) => {
-    return (<div className="tweet">
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+const Tweet = ({ name, username, time, tweet, image, avatar ,key}) => {
+    useEffect(()=>{
+        console.log(key);
+    })
+    const navigate=useNavigate();
+    const opensingletweet=()=>{
+          navigate("/tweet/:id")
+
+    }
+    return (<div className="tweet" onClick={opensingletweet}>
         <img
             className="profile-pic"
             src={avatar}
