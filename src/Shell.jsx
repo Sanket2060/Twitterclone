@@ -7,17 +7,16 @@ const Shell = () => {
 return (
 
     <>
-        <Navbar />
         <BrowserRouter>
+        <Navbar />
         <Routes>
-            <Route index element={<Home />}></Route>
+            <Route index element={<Home />}/>
             <Route path='/about' element={<About />}/>
             <Route path='/tweet/:id' element={<Singletweet />}/>
-        </Routes>
-               
+        </Routes>    
       </BrowserRouter>
 
-    <Home />
+   
   
     </>
 )
