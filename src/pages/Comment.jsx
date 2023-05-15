@@ -1,16 +1,16 @@
 const Comment = () => {
   return (
     <>
-      <div class="comment-box">
-        <div class="user-info">
-          <img src="profile-picture.png" alt="Profile Picture" />
-          <div class="user-details">
+      <div className="comment-box">
+        <div className="user-info">
+          <img src="" alt="Profile Picture" />
+          <div className="user-details">
             <h3>Username</h3>
-            <span class="handle">@handle</span>
-            <span class="timestamp">10m</span>
+            <span className="handle">@handle</span>
+            <span className="timestamp">10m</span>
           </div>
         </div>
-        <textarea placeholder="Comment"></textarea>
+        <textarea placeholder="Comment" ></textarea>
         <button>Post</button>
       </div>
     </>
