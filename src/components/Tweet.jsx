@@ -3,9 +3,9 @@ import TweetBody from "./TweetBody";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-const Tweet = ({ name, username, time, tweet, image, avatar ,key}) => {
+const Tweet = ({ name, username, time, tweet, image, avatar ,_id}) => {
     useEffect(()=>{
-        console.log(key);
+       
     })
     const navigate=useNavigate();
     const opensingletweet=()=>{
