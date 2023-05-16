@@ -4,12 +4,12 @@ import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 const Tweet = ({ name, username, time, tweet, image, avatar ,_id}) => {
-    useEffect(()=>{
+    // useEffect(()=>{
        
-    })
+    // })
     const navigate=useNavigate();
     const opensingletweet=()=>{
-          navigate("/tweet/:"+{_id})
+          navigate("/tweet/:"+_id)
 
     }
     return (<div className="tweet" onClick={opensingletweet}>
