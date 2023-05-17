@@ -26,7 +26,7 @@ function Singletweet() {
       const {
         content,
         image,
-        user: {name,fullname,githubId}}=
+        user: {name,fullname,githubId}={}}=
         postdata;
     
 
