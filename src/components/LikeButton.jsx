@@ -3,7 +3,7 @@ const LikeButton = ({ toggle }) => {
 
     useEffect(() => {
         return () => {
-            console.log('like Component unmounted');
+            // console.log('like Component unmounted');
         }
 
     }, []

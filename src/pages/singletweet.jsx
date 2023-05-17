@@ -7,8 +7,7 @@ import Back from '../components/Back';
 function Singletweet() {
     const {_id}=useParams();
     console.log(_id);
-    const [tweet,setTweet]=useState(null);
-    const [postdata,SetPostData]=useState(null);
+    const [postdata,SetPostData]=useState({});
     const fetchTweet= async () =>
     { 
       // console.log(_id);
@@ -17,25 +16,29 @@ function Singletweet() {
             apikey : '6456780c7213f63d4325ec49',
           }
         })
-        console.log(resp.data.post);
+        // console.log(resp.data.post);
         SetPostData(resp.data.post);
-        
-    }
-    useEffect(()=>{
+        console.log("data="+postdata);
+      }
+      useEffect(()=>{
         fetchTweet();
-    },[]);
+      },[]);
+      const {content,image,user: {githubId,fullname,name}}=postdata
+    
+
+
   return (
     <>
     <Back />
-    
-    {
+    <Tweet name={fullname} username={name}  time="5hrs" tweet={content} image={image}  _id={_id} avatar={"https://avatars.githubusercontent.com/u/"+githubId+"?v=4"}/>
+    {/* {
     postdata?
       postdata.map(({ user,content, image, _id }) => {
         return <Tweet name={user.fullname} username={user.name}  time="5hrs" tweet={content} image={image} avatar={"https://avatars.githubusercontent.com/u/"+user.githubId+"?v=4"} _id={_id} />
         
-      }):alert("Can't load this post")
+      }):null
     }
-      {/* <Tweet /> */}
+      <Tweet /> */}
     <Comment />
   
     </>

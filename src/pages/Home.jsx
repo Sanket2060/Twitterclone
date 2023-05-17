@@ -14,7 +14,7 @@ const Home = () => {
         apikey: '6456780c7213f63d4325ec49'
       }
     });
-    console.log(posts.data)
+    // console.log(posts.data)
     setUser(posts.data);
   };
   useEffect(() => {
@@ -25,7 +25,7 @@ const Home = () => {
     
       <UserTweet setShouldRefresh={setShouldRefresh} />
       {users.map(({ user,content, image, _id }) => {
-        return <Tweet name={user.fullname} username={'@'+user.name}  time="5hrs" tweet={content} image={image} avatar={"https://avatars.githubusercontent.com/u/"+user.githubId+"?v=4"} _id={_id} />
+        return <Tweet name={user.fullname} username={'@'+user.name}  time="10seconds" tweet={content} image={image} avatar={"https://avatars.githubusercontent.com/u/"+user.githubId+"?v=4"} _id={_id} />
         // return <Tweet name={data.user.fullname}  time="5hrs" tweet={data.content} image={data.image} avatar={"https://avatars.githubusercontent.com/u/"+data.user.githubId+"?v=4"} key={data.user._id} />
  
       }

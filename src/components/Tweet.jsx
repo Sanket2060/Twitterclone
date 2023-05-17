@@ -9,7 +9,7 @@ const Tweet = ({ name, username, time, tweet, image, avatar ,_id}) => {
     // })
     const navigate=useNavigate();
     const opensingletweet=()=>{
-          navigate("/tweet/:"+_id)
+          navigate("/tweet/"+_id)
 
     }
     return (<div className="tweet" onClick={opensingletweet}>

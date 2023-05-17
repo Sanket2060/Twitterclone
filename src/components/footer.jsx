@@ -7,7 +7,7 @@ const Footer = () => {
         setIsLiked(isLiked => !isLiked);
     }
     useEffect(() => {
-        console.log("Hello ");
+        // console.log("Hello ");
     }, [])
     return (<div className="tweet-footer">
         <button className="btn-reply">Reply</button>

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 const UnLikeButton = ({ toggle }) => {
     useEffect(() => {
         return () => {
-            console.log('Unlike Component unmounted');
+            // console.log('Unlike Component unmounted');
         }
 
     }, []);
