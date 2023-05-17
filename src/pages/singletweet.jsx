@@ -18,12 +18,16 @@ function Singletweet() {
         })
         // console.log(resp.data.post);
         SetPostData(resp.data.post);
-        console.log("data="+postdata);
+        console.log("data="+postdata);      
       }
       useEffect(()=>{
         fetchTweet();
       },[]);
-      const {content,image,user: {githubId,fullname,name}}=postdata
+      const {
+        content,
+        image,
+        user: {name,fullname,githubId}}=
+        postdata;
     
 
 
